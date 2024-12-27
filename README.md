@@ -1,1 +1,2 @@
-# rare
+# rare  
+Ecommerce website for cloths 

@@ -1,0 +1,24 @@
+   <?php
+    include "admin/config.php";
+    $sql = "SELECT * FROM trek";
+    $result = mysqli_query($conn, $sql) or die("query unsuccessful");
+    if (mysqli_num_rows($result) > 0) {
+      ?>
+
+
+   <?php
+      while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+
+
+./admin/uploads/tour/<?php echo $row['dham_image']; ?>
+
+ <?php } ?>
+
+
+      <?php
+    } else {
+      echo '<p>No Record found</p>';
+    }
+    mysqli_close($conn);
+    ?>
